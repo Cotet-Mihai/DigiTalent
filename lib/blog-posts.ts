@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     category: "Career",
     title: "Topul Joburilor pentru Talente Digitale: Cum Să-ți Găsești Locul în Era Digitală",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    image: "/images/blog-featured.jpg",
+    image: "/poze%20blog/ARTICOLUL%201%20Topul%20joburilor.png",
     paragraphs: [
       {
         subtitle: "",
@@ -74,7 +74,7 @@ export const blogPosts: BlogPost[] = [
     category: "Career",
     title: "5 Strategii Esențiale pentru a Deveni un Promoter Online de Succes",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    image: "/images/blog-featured.jpg",
+    image: "/poze%20blog/ARTICOLUL%202%20.png",
     paragraphs: [
       {
         subtitle: "",
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
     category: "Career",
     title: "Secretele Succesului Profesional: Ghidul nostru pentru Găsirea Jobului Ideal",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    image: "/images/blog-featured.jpg",
+    image: "/poze%20blog/ARTICOLUL%203%20SECRETELE%20SUCCESULUI%20PROF.png",
     paragraphs: [
       {
         subtitle: "",
@@ -249,7 +249,7 @@ export const blogPosts: BlogPost[] = [
     category: "Career",
     title: "Construind Branduri și Comunități: Ghid Esențial pentru Joburile din Social Media",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    image: "/images/blog-featured.jpg",
+    image: "/poze%20blog/ARTICOLUL%204%20CONSTRUIND%20BRANDURI%20.png",
     paragraphs: [
       {
         subtitle: "",
@@ -348,7 +348,7 @@ export const blogPosts: BlogPost[] = [
     category: "Career",
     title: "Rolul Moderatorului Online",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    image: "/images/blog-featured.jpg",
+    image: "/poze%20blog/ARTICOLUL%205%20ROLUL%20MODERATORULUI.png",
     paragraphs: [
         {
             subtitle: "",

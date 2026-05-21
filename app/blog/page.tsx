@@ -27,7 +27,7 @@ export default function BlogPage() {
               <div style={{ padding: "1.75rem" }}>
                 <span style={{ display: "inline-block", color: MINT, fontWeight: 700, fontSize: "0.78rem", fontFamily: "Lato, sans-serif", background: DARK, padding: "0.2rem 0.65rem", borderRadius: 99, marginBottom: "0.75rem" }}>{post.category}</span>
                 <h2 style={{ color: DARK, fontSize: "1rem", fontWeight: 800, marginBottom: "0.9rem", fontFamily: "Lato, sans-serif", lineHeight: 1.4 }}>{post.title}</h2>
-                <p style={{ color: "#7a7a7a", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.5rem", fontFamily: "Lato, sans-serif" }}>{post.excerpt}</p>
+                <p style={{ color: "#7a7a7a", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.5rem", fontFamily: "Lato, sans-serif", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{post.paragraphs[0].text}</p>
                 <Link href={`/blog/${post.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", color: DARK, fontWeight: 700, fontSize: "0.875rem", textDecoration: "none", fontFamily: "Lato, sans-serif", background: MINT, padding: "0.55rem 1.1rem", borderRadius: 8 }}>
                   Citește mai mult <ArrowRight size={14} color={DARK} />
                 </Link>
