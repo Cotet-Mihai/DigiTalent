@@ -40,10 +40,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <h2 style={{ color: DARK, fontSize: "clamp(1.4rem,2.5vw,2rem)", fontWeight: 800, fontFamily: "Lato, sans-serif", lineHeight: 1.3, marginBottom: "2rem" }}>{post.title}</h2>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            {post.paragraphs.map((para, i) => (
-              <p key={i} style={{ color: "#4a4a4a", fontSize: "1rem", lineHeight: 1.85, fontFamily: "Lato, sans-serif" }}>{para}</p>
-            ))}
+          {/* Primul paragraf fără subtitlu — stilizat ca intro */}
+          {post.paragraphs[0] && !post.paragraphs[0].subtitle && (
+            <p style={{ color: "#3a3a3a", fontSize: "1.1rem", lineHeight: 2, fontFamily: "Lato, sans-serif", fontWeight: 500, borderLeft: `4px solid ${MINT}`, paddingLeft: "1.25rem", marginBottom: "1rem" }}>
+              {post.paragraphs[0].text}
+            </p>
+          )}
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+            {post.paragraphs.map((para, i) => {
+              if (i === 0 && !para.subtitle) return null;
+              const isEven = i % 2 === 0;
+              return (
+                <div key={i} style={{ display: "grid", gridTemplateColumns: "3px 1fr", gap: "0 1.5rem", padding: "2rem 0", borderBottom: "1px solid #f0f0f0" }}>
+                  <div style={{ background: isEven ? MINT : DARK, borderRadius: 99 }} />
+                  <div>
+                    <h3 style={{ color: DARK, fontSize: "1.05rem", fontWeight: 800, fontFamily: "Lato, sans-serif", marginBottom: "0.65rem", display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                      <span style={{ background: isEven ? MINT : DARK, color: isEven ? DARK : MINT, fontSize: "0.7rem", fontWeight: 700, fontFamily: "Lato, sans-serif", padding: "0.15rem 0.55rem", borderRadius: 99, flexShrink: 0 }}>
+                        {String(i).padStart(2, "0")}
+                      </span>
+                      {para.subtitle}
+                    </h3>
+                    <p style={{ color: "#4a4a4a", fontSize: "0.975rem", lineHeight: 1.85, fontFamily: "Lato, sans-serif" }}>{para.text}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div style={{ borderTop: "1.5px solid #e5e5e5", marginTop: "4rem", paddingTop: "3rem" }}>
