@@ -60,29 +60,48 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section style={{ position: "relative", minHeight: "100vh", display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-        <div style={{ position: "relative" }} className="hero-img-col">
+      <section className="hero-section" style={{ position: "relative", minHeight: "100vh", display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+        <div style={{ position: "relative" }} className="hero-img-col hero-fade-in">
           <Image src="/images/1920x1281.jpg" alt="Career" fill style={{ objectFit: "cover", objectPosition: "center top" }} priority />
           <div style={{ position: "absolute", inset: 0, background: "rgba(10,10,10,0.35)" }} />
         </div>
-        <div style={{ background: DARK, display: "flex", alignItems: "center", padding: "8rem 4rem 4rem", position: "relative", overflow: "hidden" }}>
+        <div className="hero-content-col" style={{ background: DARK, display: "flex", alignItems: "center", padding: "8rem 4rem 4rem", position: "relative", overflow: "hidden" }}>
           <span style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -60%)", fontSize: "clamp(8rem, 14vw, 13rem)", fontWeight: 900, fontFamily: "Lato, sans-serif", color: "rgba(255,255,255,0.04)", whiteSpace: "nowrap", pointerEvents: "none", userSelect: "none", lineHeight: 1 }}>
             Career
           </span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <span style={{ color: MINT, fontWeight: 700, fontSize: "1rem", fontFamily: "Lato, sans-serif", display: "block", marginBottom: "1rem" }}>Career</span>
-            <h1 style={{ color: "#fff", fontSize: "clamp(2.5rem, 4vw, 4.5rem)", fontWeight: 900, lineHeight: 1.05, marginBottom: "1.5rem", fontFamily: "Lato, sans-serif" }}>
+            <span className="hero-slide-r hero-d1" style={{ color: MINT, fontWeight: 700, fontSize: "1rem", fontFamily: "Lato, sans-serif", display: "block", marginBottom: "1rem" }}>Career</span>
+            <h1 className="hero-fade-up hero-d2" style={{ color: "#fff", fontSize: "clamp(2.5rem, 4vw, 4.5rem)", fontWeight: 900, lineHeight: 1.05, marginBottom: "1.5rem", fontFamily: "Lato, sans-serif" }}>
               CONSTRUIM<br />CARIERE DE<br />SUCCES
             </h1>
-            <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: 1.75, maxWidth: 400, marginBottom: "2.25rem", fontFamily: "Lato, sans-serif" }}>
+            <p className="hero-fade-up hero-d3" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem", lineHeight: 1.75, maxWidth: 400, marginBottom: "2.25rem", fontFamily: "Lato, sans-serif" }}>
               DigiTalent este mai mult decât un loc de muncă. Împreună construim o carieră de succes. De la identificarea abilităților unice până la potrivirea cu compania și susținerea în creșterea profesională, vă suntem alături la fiecare pas. Împreună transformăm obiectivele în realitate.
             </p>
-            <Link href="/despre-noi" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: MINT, color: DARK, padding: "0.85rem 1.75rem", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem", textDecoration: "none", borderRadius: 8 }}>
+            <Link href="/despre-noi" className="hero-fade-up hero-d4" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: MINT, color: DARK, padding: "0.85rem 1.75rem", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem", textDecoration: "none", borderRadius: 8 }}>
               Află mai multe <ArrowRight size={16} color={DARK} />
             </Link>
           </div>
         </div>
-        <style>{`.hero-img-col { display: block !important; } @media(max-width:768px){ .hero-img-col { display:none !important; } }`}</style>
+        <style>{`
+          .hero-img-col { display: block !important; }
+          @media(max-width:768px){
+            .hero-img-col { display:none !important; }
+            .hero-section { grid-template-columns:1fr !important; }
+            .hero-content-col {
+              padding: 6rem 1.5rem 3.5rem !important;
+              min-height: 100vh;
+              background:
+                linear-gradient(to bottom,
+                  rgba(19,19,19,0.72) 0%,
+                  rgba(19,19,19,0.82) 25%,
+                  rgba(19,19,19,0.95) 45%,
+                  #131313 60%,
+                  #131313 100%
+                ),
+                url('/images/1920x1281.jpg') 35% 0% / cover no-repeat !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* PENTRU COMPANII / CANDIDAȚI */}
@@ -229,12 +248,12 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALE */}
-      <div style={{ position: "relative", paddingTop: "70px" }}>
-        <div style={{ position: "absolute", top: 0, right: 0, width: "33.333%", height: "90px", background: MINT, borderRadius: "20px 20px 0 0", zIndex: 0 }} />
+      <div className="testi-outer" style={{ position: "relative", paddingTop: "70px" }}>
+        <div className="testi-deco" style={{ position: "absolute", top: 0, right: 0, width: "33.333%", height: "90px", background: MINT, borderRadius: "20px 20px 0 0", zIndex: 0 }} />
         <section style={{ display: "grid", gridTemplateColumns: "2fr 1fr", position: "relative", zIndex: 1 }} className="testi-wrap">
-          <div style={{ background: DARK, backgroundImage: "url('/images/1920-960.jpg')", backgroundSize: "cover", backgroundPosition: "center", padding: "5rem 3rem", position: "relative" }}>
+          <div className="testi-main" style={{ background: DARK, backgroundImage: "url('/images/1920-960.jpg')", backgroundSize: "cover", backgroundPosition: "center", padding: "5rem 3rem", position: "relative" }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(19,19,19,0.82)" }} />
-            <div style={{ position: "relative", zIndex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+            <div className="testi-inner-grid" style={{ position: "relative", zIndex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
               {testimonials.map((t, i) => (
                 <div key={i} style={{ background: "rgba(255,255,255,0.08)", borderRadius: 16, padding: "1.75rem", backdropFilter: "blur(4px)" }}>
                   <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.875rem", lineHeight: 1.75, marginBottom: "1.25rem", fontFamily: "Lato, sans-serif" }}>{t.text}</p>
@@ -255,7 +274,16 @@ export default function HomePage() {
           <div style={{ background: MINT, display: "flex", alignItems: "center", justifyContent: "center", padding: "5rem 2rem" }}>
             <h2 style={{ color: DARK, fontSize: "clamp(1.75rem,3vw,2.75rem)", fontWeight: 900, fontFamily: "Lato, sans-serif", writingMode: "vertical-rl", transform: "rotate(180deg)", letterSpacing: "0.1em" }}>Testimoniale</h2>
           </div>
-          <style>{`@media(max-width:768px){ .testi-wrap { grid-template-columns:1fr !important; } .testi-wrap > div:last-child { display:none !important; } }`}</style>
+          <style>{`
+            @media(max-width:768px){
+              .testi-outer { padding-top: 0 !important; }
+              .testi-deco { display: none !important; }
+              .testi-wrap { grid-template-columns:1fr !important; }
+              .testi-wrap > div:last-child { display:none !important; }
+              .testi-inner-grid { grid-template-columns:1fr !important; }
+              .testi-main { padding: 3rem 1.5rem !important; }
+            }
+          `}</style>
         </section>
       </div>
 

@@ -29,18 +29,18 @@ export default function Footer() {
             </ul>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", justifyContent: "flex-start", paddingTop: "0.25rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            <a href="tel:0737161111" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
               <div style={{ width: 36, height: 36, background: "rgba(194,230,223,0.12)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                 <Phone size={16} color={MINT} strokeWidth={1.75} />
               </div>
-              <span style={{ color: "#fff", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem" }}>(+407) 3716 1111</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ color: "#fff", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem" }}>0737 161 111</span>
+            </a>
+            <a href="mailto:contact@digitalent.ro" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
               <div style={{ width: 36, height: 36, background: "rgba(194,230,223,0.12)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                 <Mail size={16} color={MINT} strokeWidth={1.75} />
               </div>
               <span style={{ color: "#fff", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem" }}>contact@digitalent.ro</span>
-            </div>
+            </a>
           </div>
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem 0", textAlign: "center" }}>
