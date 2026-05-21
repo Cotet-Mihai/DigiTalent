@@ -4,9 +4,10 @@ const MINT = "#C2E6DF";
 const DARK = "#131313";
 
 const contactItems = [
-  { Icon: Phone, text: "0737 161 111", iconBg: MINT, iconColor: DARK },
-  { Icon: Mail, text: "contact@digitalent.com", iconBg: MINT, iconColor: DARK },
-  { Icon: MapPin, text: "Wimpole Street London - England HQ\nVoluntari, Bd. Pipera - Romania HQ", iconBg: MINT, iconColor: DARK },
+  { Icon: Phone, label: "Telefon", text: "0737 161 111", href: "tel:0737161111", iconBg: MINT, iconColor: DARK },
+  { Icon: Mail, label: "Email", text: "contact@digitalent.com", href: "mailto:contact@digitalent.com", iconBg: MINT, iconColor: DARK },
+  { Icon: MapPin, label: "Locație România", text: "Bd. Pipera, Voluntari", href: null, iconBg: MINT, iconColor: DARK },
+  { Icon: MapPin, label: "Locație England", text: "Wimpole Street, London", href: null, iconBg: MINT, iconColor: DARK },
 ];
 
 export default function ContactPage() {
@@ -22,17 +23,31 @@ export default function ContactPage() {
 
       {/* CONTACT CARDS */}
       <section style={{ padding: "4rem 0", background: "#fff" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1.5rem" }} className="three-col">
-          {contactItems.map((item, i) => (
-            <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", padding: "1.5rem", border: "1.5px solid #e5e5e5", borderRadius: 16 }}>
-              <div style={{ width: 48, height: 48, background: item.iconBg, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <item.Icon size={22} color={item.iconColor} strokeWidth={1.75} />
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: "1.5rem" }} className="four-col">
+          {contactItems.map((item) => {
+            const inner = (
+              <>
+                <div style={{ width: 40, height: 40, background: item.iconBg, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <item.Icon size={18} color={item.iconColor} strokeWidth={1.75} />
+                </div>
+                <div>
+                  <p style={{ color: "#7a7a7a", fontFamily: "Lato, sans-serif", fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: "0.35rem" }}>{item.label}</p>
+                  <p style={{ color: DARK, fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.85rem", lineHeight: 1.5 }}>{item.text}</p>
+                </div>
+              </>
+            );
+            return item.href ? (
+              <a key={item.text} href={item.href} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "1.25rem", border: "1.5px solid #e5e5e5", borderRadius: 16, textDecoration: "none" }}>
+                {inner}
+              </a>
+            ) : (
+              <div key={item.text} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "1.25rem", border: "1.5px solid #e5e5e5", borderRadius: 16 }}>
+                {inner}
               </div>
-              <p style={{ color: DARK, fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.95rem", lineHeight: 1.6, whiteSpace: "pre-line", marginTop: "0.1rem" }}>{item.text}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
-        <style>{`@media(max-width:768px){ .three-col { grid-template-columns:1fr !important; } }`}</style>
+        <style>{`@media(max-width:900px){ .four-col { grid-template-columns:1fr 1fr !important; } } @media(max-width:540px){ .four-col { grid-template-columns:1fr !important; } }`}</style>
       </section>
 
       {/* FORM + INFO */}
