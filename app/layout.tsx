@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   );
