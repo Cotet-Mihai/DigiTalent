@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Lightbulb, ClipboardCheck } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
+
+export const metadata: Metadata = {
+  title: "Joburi – Content Creator, Copywriter, Promoter Online",
+  description: "Locuri de muncă disponibile la DigiTalent: Creator de Conținut Video, Copywriter și Promoter Online în București. Aplică acum și construiește-ți cariera în digital.",
+  alternates: { canonical: "https://www.digitalent.com/jobs" },
+  openGraph: {
+    title: "Joburi în Digital | DigiTalent – Aplică Acum",
+    description: "Descoperă joburile disponibile la DigiTalent: Content Creator, Copywriter, Promoter Online în București. Program flexibil, salariu competitiv.",
+    url: "https://www.digitalent.com/jobs",
+  },
+};
+
+const BASE_URL = "https://www.digitalent.com";
 
 const MINT = "#C2E6DF";
 const DARK = "#131313";
@@ -12,18 +26,51 @@ const jobs = [
     desc: "Fă parte din echipa noastră de creare de conținut și elaborează conținut video care rezonează cu publicul nostru. Căutăm persoane cu abilități de storytelling și editare video pentru a crea materiale de mare impact.",
     tags: ["Part Time", "4.000-5000 lei/ luna", "1 Zi de Lucru de Acasă", "Experiență >1 an", "București"],
     dark: true,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: "Creator de Conținut Video",
+      description: "Elaborează conținut video care rezonează cu publicul nostru. Căutăm persoane cu abilități de storytelling și editare video.",
+      datePosted: "2025-01-01",
+      employmentType: "PART_TIME",
+      hiringOrganization: { "@type": "Organization", name: "DigiTalent", sameAs: BASE_URL },
+      jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "București", addressCountry: "RO" } },
+      baseSalary: { "@type": "MonetaryAmount", currency: "RON", value: { "@type": "QuantitativeValue", minValue: 4000, maxValue: 5000, unitText: "MONTH" } },
+    },
   },
   {
     title: "Copywriter (Creator de Conținut)",
     desc: "Ești pasionat de puterea cuvintelor și ai o abilitate unică de a transforma idei în povești captivante? Veți împleti magia acestora, creând texte convingătoare care captivează audiențele și dau viață poveștii brandului.",
     tags: ["Full Time, program flexibil", "3.000-4.800 lei/ luna", "1 Zi de Lucru de Acasă", "Experiență >1 an", "București"],
     dark: false,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: "Copywriter – Creator de Conținut",
+      description: "Creează texte convingătoare care captivează audiențele și dau viață poveștii brandului.",
+      datePosted: "2025-01-01",
+      employmentType: "FULL_TIME",
+      hiringOrganization: { "@type": "Organization", name: "DigiTalent", sameAs: BASE_URL },
+      jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "București", addressCountry: "RO" } },
+      baseSalary: { "@type": "MonetaryAmount", currency: "RON", value: { "@type": "QuantitativeValue", minValue: 3000, maxValue: 4800, unitText: "MONTH" } },
+    },
   },
   {
     title: "Promoter Online",
     desc: "Ești expert în social media, cu abilități de a stimula angajamentul și de a construi comunități online? Alătură-te echipei noastre în calitate de Promotor Online și creează conținut captivant, interacționând cu urmăritorii și implementând strategii creative pentru a extinde prezența noastră. Dacă ești pasionat de conectarea cu audiența, de entertainment și de producerea unui impact în sfera digitală, dă-ne de veste! Aplică acum pentru a face parte din echipa noastră dinamică.",
     tags: ["Full Time, program flexibil", "4.000-8.000 lei/ luna", "Experiență >1 an", "București"],
     dark: true,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: "Promoter Online – Social Media",
+      description: "Creează conținut captivant, interacționează cu urmăritorii și implementează strategii creative pentru extinderea prezenței online.",
+      datePosted: "2025-01-01",
+      employmentType: "FULL_TIME",
+      hiringOrganization: { "@type": "Organization", name: "DigiTalent", sameAs: BASE_URL },
+      jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "București", addressCountry: "RO" } },
+      baseSalary: { "@type": "MonetaryAmount", currency: "RON", value: { "@type": "QuantitativeValue", minValue: 4000, maxValue: 8000, unitText: "MONTH" } },
+    },
   },
 ];
 
@@ -32,6 +79,9 @@ const recentPosts = blogPosts.slice(0, 3);
 export default function JobsPage() {
   return (
     <>
+      {jobs.map((job) => (
+        <script key={job.schema.title} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(job.schema) }} />
+      ))}
       <section style={{ background: DARK, paddingTop: "8rem", paddingBottom: "4rem", position: "relative", overflow: "hidden" }}>
         <span style={{ position: "absolute", top: "50%", right: "-2rem", transform: "translateY(-50%)", fontSize: "12rem", fontWeight: 900, fontFamily: "Lato, sans-serif", color: "rgba(255,255,255,0.04)", whiteSpace: "nowrap", pointerEvents: "none", lineHeight: 1 }}>Job List</span>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem", position: "relative", zIndex: 1 }}>

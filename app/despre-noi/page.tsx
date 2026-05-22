@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Award, Users, Building, Target, Rocket, Lightbulb, ClipboardCheck, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Despre Noi – 15 Ani de Recrutare în România",
+  description: "DigiTalent este o agenție de recrutare cu experiență de peste 15 ani, cu sediul în București, care conectează talentele cu companiile din toată România. Află misiunea și valorile noastre.",
+  alternates: { canonical: "https://www.digitalent.com/despre-noi" },
+  openGraph: {
+    title: "Despre DigiTalent – Agenție de Recrutare România",
+    description: "Peste 15 ani de experiență în recrutare. Conectăm talentele cu companiile potrivite din toată România.",
+    url: "https://www.digitalent.com/despre-noi",
+  },
+};
 
 const MINT = "#C2E6DF";
 const DARK = "#131313";

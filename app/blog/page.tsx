@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
+
+export const metadata: Metadata = {
+  title: "Blog – Sfaturi Carieră și Joburi în Digital",
+  description: "Articole despre carieră, joburi în digital marketing, content creation și social media. Ghiduri practice pentru găsirea jobului ideal în România.",
+  alternates: { canonical: "https://www.digitalent.com/blog" },
+  openGraph: {
+    title: "Blog DigiTalent – Sfaturi Carieră și Joburi în Digital",
+    description: "Articole despre carieră, joburi în digital marketing, content creation și social media în România.",
+    url: "https://www.digitalent.com/blog",
+  },
+};
 
 const MINT = "#C2E6DF";
 const DARK = "#131313";

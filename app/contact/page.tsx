@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { Phone, Mail, MapPin } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact – DigiTalent Agenție de Recrutare",
+  description: "Contactează DigiTalent pentru recrutare sau consiliere de carieră. Telefon: 0737 161 111. Email: contact@digitalent.com. Oferim consultanță gratuită în toată România.",
+  alternates: { canonical: "https://www.digitalent.com/contact" },
+  openGraph: {
+    title: "Contact DigiTalent – Agenție de Recrutare România",
+    description: "Contactează-ne pentru recrutare sau consiliere gratuită de carieră. Suntem disponibili în toată România.",
+    url: "https://www.digitalent.com/contact",
+  },
+};
 
 const MINT = "#C2E6DF";
 const DARK = "#131313";
