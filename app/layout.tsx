@@ -7,7 +7,8 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import CookieBanner from '@/components/CookieBanner';
+import AnalyticsConsent from '@/components/AnalyticsConsent';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -79,7 +80,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Analytics />
         <SpeedInsights/>
-        <GoogleAnalytics gaId="G-XTRJ2SCMVR" />
+        <CookieBanner />
+        <AnalyticsConsent />
       </body>
     </html>
   );

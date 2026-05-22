@@ -12,23 +12,20 @@ const DARK = "#131313";
 
 const cookies = [
   {
-    name: "_ga",
     provider: "Google Analytics",
-    purpose: "Distinge utilizatorii unici prin atribuirea unui ID generat aleatoriu.",
+    purpose: "Distinge utilizatorii unici și menține starea sesiunii pentru Google Analytics 4.",
     duration: "2 ani",
     type: "Analitice",
   },
   {
-    name: `_ga_XTRJ2SCMVR`,
-    provider: "Google Analytics",
-    purpose: "Menține starea sesiunii pentru Google Analytics 4.",
-    duration: "2 ani",
+    provider: "Vercel Analytics",
+    purpose: "Colectează date anonime despre paginile vizitate pentru analiza performanței site-ului.",
+    duration: "Sesiune",
     type: "Analitice",
   },
   {
-    name: "_vercel_live_token",
-    provider: "Vercel",
-    purpose: "Folosit de infrastructura Vercel pentru previzualizări de deployment.",
+    provider: "Vercel Speed Insights",
+    purpose: "Măsoară viteza de încărcare a paginilor (Core Web Vitals) pentru optimizarea performanței.",
     duration: "Sesiune",
     type: "Tehnice",
   },
@@ -89,16 +86,15 @@ export default function PoliticaCookiesPage() {
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "Lato, sans-serif", fontSize: "0.88rem" }}>
                 <thead>
                   <tr style={{ background: DARK }}>
-                    {["Nume", "Furnizor", "Scop", "Durată", "Tip"].map((h) => (
+                    {["Furnizor", "Scop", "Durată", "Tip"].map((h) => (
                       <th key={h} style={{ color: MINT, fontWeight: 700, padding: "0.75rem 1rem", textAlign: "left", whiteSpace: "nowrap" }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {cookies.map((c, i) => (
-                    <tr key={c.name} style={{ background: i % 2 === 0 ? "#f9f9f7" : "#fff" }}>
-                      <td style={{ padding: "0.75rem 1rem", color: DARK, fontWeight: 700, whiteSpace: "nowrap" }}>{c.name}</td>
-                      <td style={{ padding: "0.75rem 1rem", color: "#4a4a4a" }}>{c.provider}</td>
+                    <tr key={c.provider} style={{ background: i % 2 === 0 ? "#f9f9f7" : "#fff" }}>
+                      <td style={{ padding: "0.75rem 1rem", color: DARK, fontWeight: 700, whiteSpace: "nowrap" }}>{c.provider}</td>
                       <td style={{ padding: "0.75rem 1rem", color: "#4a4a4a" }}>{c.purpose}</td>
                       <td style={{ padding: "0.75rem 1rem", color: "#4a4a4a", whiteSpace: "nowrap" }}>{c.duration}</td>
                       <td style={{ padding: "0.75rem 1rem" }}>
