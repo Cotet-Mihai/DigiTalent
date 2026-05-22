@@ -12,7 +12,7 @@ export const blogPosts: BlogPost[] = [
     slug: "topul-joburilor-pentru-talente-digitale",
     category: "Career",
     title: "Topul Joburilor pentru Talente Digitale: Cum Să-ți Găsești Locul în Era Digitală",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    excerpt: "Era digitală a transformat piața muncii. Descoperă cele mai căutate joburi pentru talente digitale și cum să-ți găsești locul în noua economie.",
     image: "/poze%20blog/ARTICOLUL%201%20Topul%20joburilor.png",
     paragraphs: [
       {
@@ -73,7 +73,7 @@ export const blogPosts: BlogPost[] = [
     slug: "5-strategii-esentiale-pentru-a-deveni-un-promoter-online-de-succes",
     category: "Career",
     title: "5 Strategii Esențiale pentru a Deveni un Promoter Online de Succes",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    excerpt: "Vrei o carieră flexibilă cu venituri superioare? Iată 5 strategii esențiale pentru a deveni un promoter online de succes în mediul digital.",
     image: "/poze%20blog/ARTICOLUL%202%20.png",
     paragraphs: [
       {
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
     slug: "secretele-succesului-profesional-ghidul-nostru-pentru-gasirea-jobului-ideal",
     category: "Career",
     title: "Secretele Succesului Profesional: Ghidul nostru pentru Găsirea Jobului Ideal",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    excerpt: "Găsirea jobului ideal nu e despre noroc, ci despre strategie. Descoperă secretele care transformă căutarea unui job într-o experiență împuternicătoare.",
     image: "/poze%20blog/ARTICOLUL%203%20SECRETELE%20SUCCESULUI%20PROF.png",
     paragraphs: [
       {
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
     slug: "construind-branduri-si-comunitati-ghid-esential-pentru-joburile-din-social-media",
     category: "Career",
     title: "Construind Branduri și Comunități: Ghid Esențial pentru Joburile din Social Media",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    excerpt: "De la Social Media Manager la Promoter Online – explorează ecosistemul carierelor în social media și cum să construiești branduri autentice.",
     image: "/poze%20blog/ARTICOLUL%204%20CONSTRUIND%20BRANDURI%20.png",
     paragraphs: [
       {
@@ -347,7 +347,7 @@ export const blogPosts: BlogPost[] = [
     slug: "rolul-moderatorului-online",
     category: "Career",
     title: "Rolul Moderatorului Online",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    excerpt: "Moderatorul online este mai mult decât un paznic al regulilor – este constructorul comunităților digitale sănătoase. Descoperă ce presupune acest rol.",
     image: "/poze%20blog/ARTICOLUL%205%20ROLUL%20MODERATORULUI.png",
     paragraphs: [
         {

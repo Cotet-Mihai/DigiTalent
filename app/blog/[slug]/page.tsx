@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const description = post.paragraphs[0]?.text?.slice(0, 155) ?? post.title;
+  const description = post.excerpt;
   const url = `${BASE_URL}/blog/${slug}`;
 
   return {
