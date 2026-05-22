@@ -35,76 +35,142 @@ export default function CookieBanner() {
         bottom: "1.5rem",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "min(680px, calc(100vw - 2rem))",
-        background: DARK,
-        border: "1px solid rgba(194,230,223,0.2)",
-        borderRadius: 16,
-        padding: "1.5rem",
+        width: "min(760px, calc(100vw - 2rem))",
         zIndex: 1000,
-        boxShadow: "0 8px 40px rgba(0,0,0,0.45)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "1.25rem",
-        animation: "cookieSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) both",
+        animation: "cookieSlideUp 0.5s cubic-bezier(0.16,1,0.3,1) both",
       }}>
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
-          <span style={{ fontSize: "1.5rem", lineHeight: 1, flexShrink: 0 }}>🍪</span>
-          <div>
-            <p style={{ color: "#fff", fontWeight: 700, fontFamily: "Lato, sans-serif", fontSize: "0.975rem", marginBottom: "0.4rem" }}>
-              Folosim cookie-uri
-            </p>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontFamily: "Lato, sans-serif", fontSize: "0.875rem", lineHeight: 1.6 }}>
-              Utilizăm cookie-uri analitice (Google Analytics) pentru a înțelege cum este folosit site-ul și a-l îmbunătăți. Nu colectăm date personale fără acordul tău.{" "}
-              <Link href="/politica-de-cookies" style={{ color: MINT, textDecoration: "underline", fontFamily: "Lato, sans-serif" }}>
-                Politică de cookie-uri
-              </Link>
-            </p>
-          </div>
-        </div>
+        {/* Card */}
+        <div style={{
+          background: "linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%)",
+          border: "1px solid rgba(194,230,223,0.15)",
+          borderRadius: 20,
+          overflow: "hidden",
+          boxShadow: "0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04)",
+        }}>
+          {/* Mint accent bar top */}
+          <div style={{ height: 3, background: `linear-gradient(90deg, ${MINT}, rgba(194,230,223,0.3))` }} />
 
-        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "flex-end", flexWrap: "wrap" }}>
-          <button
-            onClick={decline}
-            style={{
-              background: "transparent",
-              border: "1px solid rgba(255,255,255,0.2)",
-              color: "rgba(255,255,255,0.7)",
-              borderRadius: 8,
-              padding: "0.6rem 1.25rem",
-              fontFamily: "Lato, sans-serif",
-              fontSize: "0.875rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              transition: "border-color 0.2s, color 0.2s",
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.5)"; (e.currentTarget as HTMLButtonElement).style.color = "#fff"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.7)"; }}
-          >
-            Refuză
-          </button>
-          <button
-            onClick={accept}
-            style={{
-              background: MINT,
-              border: "none",
-              color: DARK,
-              borderRadius: 8,
-              padding: "0.6rem 1.5rem",
-              fontFamily: "Lato, sans-serif",
-              fontSize: "0.875rem",
-              fontWeight: 700,
-              cursor: "pointer",
-            }}
-          >
-            Acceptă toate
-          </button>
+          <div style={{ padding: "1.75rem 2rem", display: "flex", gap: "2rem", alignItems: "center" }} className="cookie-inner">
+
+            {/* Icon block */}
+            <div style={{
+              flexShrink: 0,
+              width: 56,
+              height: 56,
+              borderRadius: 16,
+              background: "rgba(194,230,223,0.1)",
+              border: "1px solid rgba(194,230,223,0.2)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "1.6rem",
+            }}>
+              🍪
+            </div>
+
+            {/* Text */}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <p style={{
+                color: "#fff",
+                fontWeight: 800,
+                fontFamily: "Lato, sans-serif",
+                fontSize: "1rem",
+                marginBottom: "0.35rem",
+                letterSpacing: "-0.01em",
+              }}>
+                Respectăm confidențialitatea ta
+              </p>
+              <p style={{
+                color: "rgba(255,255,255,0.5)",
+                fontFamily: "Lato, sans-serif",
+                fontSize: "0.84rem",
+                lineHeight: 1.65,
+                margin: 0,
+              }}>
+                Folosim cookie-uri analitice pentru a îmbunătăți experiența pe site. Datele sunt anonimizate.{" "}
+                <Link href="/politica-de-cookies" style={{
+                  color: MINT,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  borderBottom: `1px solid rgba(194,230,223,0.4)`,
+                }}>
+                  Află mai mult
+                </Link>
+              </p>
+            </div>
+
+            {/* Buttons */}
+            <div style={{ display: "flex", gap: "0.6rem", flexShrink: 0 }} className="cookie-btns">
+              <button
+                onClick={decline}
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  color: "rgba(255,255,255,0.6)",
+                  borderRadius: 10,
+                  padding: "0.65rem 1.1rem",
+                  fontFamily: "Lato, sans-serif",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  whiteSpace: "nowrap",
+                  transition: "all 0.2s",
+                }}
+                onMouseEnter={e => {
+                  const b = e.currentTarget as HTMLButtonElement;
+                  b.style.background = "rgba(255,255,255,0.1)";
+                  b.style.color = "#fff";
+                }}
+                onMouseLeave={e => {
+                  const b = e.currentTarget as HTMLButtonElement;
+                  b.style.background = "rgba(255,255,255,0.06)";
+                  b.style.color = "rgba(255,255,255,0.6)";
+                }}
+              >
+                Refuză
+              </button>
+              <button
+                onClick={accept}
+                style={{
+                  background: MINT,
+                  border: "none",
+                  color: DARK,
+                  borderRadius: 10,
+                  padding: "0.65rem 1.4rem",
+                  fontFamily: "Lato, sans-serif",
+                  fontSize: "0.85rem",
+                  fontWeight: 800,
+                  cursor: "pointer",
+                  whiteSpace: "nowrap",
+                  boxShadow: `0 4px 20px rgba(194,230,223,0.25)`,
+                  transition: "transform 0.15s, box-shadow 0.15s",
+                }}
+                onMouseEnter={e => {
+                  const b = e.currentTarget as HTMLButtonElement;
+                  b.style.transform = "translateY(-1px)";
+                  b.style.boxShadow = "0 6px 24px rgba(194,230,223,0.35)";
+                }}
+                onMouseLeave={e => {
+                  const b = e.currentTarget as HTMLButtonElement;
+                  b.style.transform = "translateY(0)";
+                  b.style.boxShadow = "0 4px 20px rgba(194,230,223,0.25)";
+                }}
+              >
+                Acceptă toate
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       <style>{`
         @keyframes cookieSlideUp {
-          from { opacity: 0; transform: translateX(-50%) translateY(24px); }
+          from { opacity: 0; transform: translateX(-50%) translateY(32px); }
           to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        @media (max-width: 640px) {
+          .cookie-inner { flex-direction: column !important; gap: 1.25rem !important; }
+          .cookie-btns  { width: 100%; justify-content: flex-end; }
         }
       `}</style>
     </>
