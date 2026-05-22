@@ -47,8 +47,6 @@ export default function CookieBanner() {
           overflow: "hidden",
           boxShadow: "0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04)",
         }}>
-          {/* Mint accent bar top */}
-          <div style={{ height: 3, background: `linear-gradient(90deg, ${MINT}, rgba(194,230,223,0.3))` }} />
 
           <div style={{ padding: "1.75rem 2rem", display: "flex", gap: "2rem", alignItems: "center" }} className="cookie-inner">
 
