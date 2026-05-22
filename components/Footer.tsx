@@ -11,7 +11,7 @@ export default function Footer() {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: "2rem", paddingBottom: "3rem" }} className="footer-grid">
           <div>
-            <Image src="/images/logo1.png" alt="DigiTalent" width={300} height={100} style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+            <Image src="/images/logo1.png" alt="DigiTalent" width={600} height={200} style={{ objectFit: "contain", filter: "brightness(0) invert(1)" }} />
           </div>
           <div>
             <h2 style={{ color: MINT, fontSize: "1.1rem", fontWeight: 700, marginBottom: "1.25rem", fontFamily: "Lato, sans-serif" }}>Navigare</h2>
