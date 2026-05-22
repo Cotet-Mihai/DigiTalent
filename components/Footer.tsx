@@ -29,6 +29,7 @@ export default function Footer() {
             </ul>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", justifyContent: "flex-start", paddingTop: "0.25rem" }}>
+            <h2 style={{ color: MINT, fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.25rem", fontFamily: "Lato, sans-serif" }}>Contact</h2>
             <a href="tel:0737161111" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
               <div style={{ width: 36, height: 36, background: "rgba(194,230,223,0.12)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                 <Phone size={16} color={MINT} strokeWidth={1.75} />
