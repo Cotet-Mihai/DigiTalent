@@ -152,10 +152,10 @@ export default function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }} className="two-col-b">
           <div style={{ position: "relative", height: 480 }} className="photos-col">
             <div style={{ position: "absolute", left: 0, top: 0, width: 200, height: 420, borderRadius: 12, overflow: "hidden" }}>
-              <Image src="/images/232-595.jpg" alt="" fill style={{ objectFit: "cover" }} />
+              <Image src="/images/232-595.jpg" alt="Profesionist recrutat prin DigiTalent" fill style={{ objectFit: "cover" }} />
             </div>
             <div style={{ position: "absolute", right: 0, bottom: 0, width: 200, height: 380, borderRadius: 12, overflow: "hidden" }}>
-              <Image src="/images/232-x-551.jpg" alt="" fill style={{ objectFit: "cover" }} />
+              <Image src="/images/232-x-551.jpg" alt="Candidat DigiTalent în carieră digitală" fill style={{ objectFit: "cover" }} />
             </div>
           </div>
           <div>
