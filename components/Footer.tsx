@@ -43,12 +43,22 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "1rem" }}>
-          <p style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif" }}>© 2025 DigiTalent • All Rights Reserved</p>
-          <span style={{ color: "#444", fontSize: "0.875rem" }}>•</span>
-          <Link href="/politica-de-confidentialitate" style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif", textDecoration: "none" }}>Politică de Confidențialitate</Link>
-          <span style={{ color: "#444", fontSize: "0.875rem" }}>•</span>
-          <Link href="/politica-de-cookies" style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif", textDecoration: "none" }}>Politică de Cookie-uri</Link>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1.5rem 0", display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "0.75rem" }}>
+            <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer">
+              <Image src="/anpc-sal.svg" alt="SAL – Soluționarea Alternativă a Litigiilor" width={250} height={50} style={{ height: 50, width: "auto" }} />
+            </a>
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+              <Image src="/anpc-sol.svg" alt="SOL – Soluționarea Online a Litigiilor" width={250} height={50} style={{ height: 50, width: "auto" }} />
+            </a>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "1rem" }}>
+            <p style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif" }}>© 2025 DigiTalent • All Rights Reserved</p>
+            <span style={{ color: "#444", fontSize: "0.875rem" }}>•</span>
+            <Link href="/politica-de-confidentialitate" style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif", textDecoration: "none" }}>Politică de Confidențialitate</Link>
+            <span style={{ color: "#444", fontSize: "0.875rem" }}>•</span>
+            <Link href="/politica-de-cookies" style={{ color: "#888", fontSize: "0.875rem", fontFamily: "Lato, sans-serif", textDecoration: "none" }}>Politică de Cookie-uri</Link>
+          </div>
         </div>
       </div>
       <style>{`@media(max-width:768px){ .footer-grid { grid-template-columns:1fr !important; } }`}</style>
